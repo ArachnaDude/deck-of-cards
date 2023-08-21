@@ -1,7 +1,7 @@
 # DECK OF CARDS
 
 A deck of 52 playing cards for use as a base for creating card games.
-This project is created in JavaScript
+This project is created in JavaScript.
 
 ## TODO
 
