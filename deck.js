@@ -24,12 +24,16 @@ class Deck {
         this.deckOfCards.push(`${cardValues[j]} of ${suits[i]}`);
       }
     }
-
-    // console logs a deck of cards in factory order
-    this.brandNewDeck = function () {
-      console.log(this.deckOfCards);
-    };
   }
+
+  // methods
+
+  // returns a deck of cards in ace to king, hearts clubs diamonds spades order
+  factoryDeck() {
+    return this.deckOfCards;
+  }
+
+  shuffle() {}
 }
-cards = new Deck();
-cards.brandNewDeck();
+const cards = new Deck();
+console.log(cards.factoryDeck());
