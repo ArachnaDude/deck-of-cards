@@ -39,7 +39,7 @@ class Deck {
     return this.deckOfCards.pop();
   }
 
-  // inverts this.jokers,
+  // inverts this.jokers, logs status to console, and deals a new shuffled deck
   toggleJokers() {
     this.jokers = !this.jokers;
     let toggleAlert = this.jokers ? "on" : "off";
