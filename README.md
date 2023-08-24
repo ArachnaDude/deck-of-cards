@@ -6,20 +6,41 @@ This project is created in JavaScript, and was designed to explore and increase 
 
 ## Using the deck of cards
 
-    factoryDeck()
+    $ const <your-variable-name-here> = new Deck();
 
-Returns a "factory new" deck of cards: ordered from Ace - King; Hearts, Clubs, Diamonds and Spades.
+Instantiates a new, randomly shuffled array, containing 52 cards by default. Access this array by adding:
 
-    shuffle()
+    .deckOfCards
 
-Returns a randomly shuffled deck of cards. Randomness is achieved with Fisher-Yates shuffling algorithm.
+to your variable name.
 
 ---
+
+    .factoryDeck()
+
+Resets the deck into a "factory new" deck of 52 cards. Cards are ordered Ace to King, and Hearts, Clubs, Diamonds, Spades.
+
+---
+
+    .shuffle()
+
+Shuffles the deck randomly. Randomness is achieved with Fisher-Yates shuffling algorithm.
+
+---
+
+    .deal()
+
+Returns and removes the "top card" (the last element of the deck of cards array). Note that this card remains gone until the desk is reset.
+
+    .toggleJokers()
+
+Toggles jokers on/off, prints current boolean status to console, and deals a new shuffled deck with jokers included/excluded.
 
 ## TODO
 
 - Create the deck of cards - DONE
 - Create a shuffle function that randomly re-orders the deck - DONE
-- Create a draw card function that removes the card from the "top" of the deck
-- Create a function that resets the deck to "factory new" order.
+- Create a draw card function that removes the card from the "top" of the deck - DONE
+- Create a function that resets the deck to "factory new" order. - DONE
 - Create "pick a card, any card" function that removes one random card from the deck
+- Create a toggle to include/exclude jokers from the deck - DONE
