@@ -14,6 +14,8 @@ Instantiates a new, randomly shuffled array, containing 52 cards by default. Acc
 
 to your variable name.
 
+## Methods
+
 ---
 
     .factoryDeck()
@@ -36,7 +38,7 @@ Returns and removes the "top card" (the last element of the deck of cards array)
 
 Toggles jokers on/off, prints current boolean status to console, and deals a new shuffled deck with jokers included/excluded.
 
-## TODO
+### TODO
 
 - Create the deck of cards - DONE
 - Create a shuffle function that randomly re-orders the deck - DONE
