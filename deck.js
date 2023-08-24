@@ -3,6 +3,7 @@ class Deck {
     this.deckOfCards = [];
     this.factoryDeck();
     this.shuffle();
+    this.jokers = false;
   }
 
   // methods
@@ -12,11 +13,14 @@ class Deck {
     this.deckOfCards = [];
 
     const suits = ["Hearts", "Clubs", "Diamonds", "Spades"];
-    const cards = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King"];
+    const ranks = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King"];
     for (let i = 0; i < suits.length; i++) {
-      for (let j = 0; j < cards.length; j++) {
-        this.deckOfCards.push(`${cards[j]} of ${suits[i]}`);
+      for (let j = 0; j < ranks.length; j++) {
+        this.deckOfCards.push(`${ranks[j]} of ${suits[i]}`);
       }
+    }
+    if (this.jokers) {
+      this.deckOfCards.push("Red Joker", "Black Joker");
     }
   }
 
@@ -33,6 +37,14 @@ class Deck {
   // removes last element of deckOfCards and returns it.
   deal() {
     return this.deckOfCards.pop();
+  }
+
+  toggleJokers() {
+    this.jokers = !this.jokers;
+    let toggleAlert = this.jokers ? "on" : "off";
+    console.log(`Jokers have been turned ${toggleAlert}, dealing new deck.`);
+    this.factoryDeck();
+    this.shuffle();
   }
 }
 
