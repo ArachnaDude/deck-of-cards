@@ -1,9 +1,9 @@
 class Deck {
   constructor() {
     this.deckOfCards = [];
+    this.jokers = false;
     this.factoryDeck();
     this.shuffle();
-    this.jokers = false;
   }
 
   // methods
@@ -39,6 +39,7 @@ class Deck {
     return this.deckOfCards.pop();
   }
 
+  // inverts this.jokers,
   toggleJokers() {
     this.jokers = !this.jokers;
     let toggleAlert = this.jokers ? "on" : "off";
