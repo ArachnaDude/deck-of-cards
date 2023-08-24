@@ -16,8 +16,6 @@ to your variable name.
 
 ## Methods
 
----
-
     .factoryDeck()
 
 Resets the deck into a "factory new" deck of 52 cards. Cards are ordered Ace to King, and Hearts, Clubs, Diamonds, Spades.
